@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komitech - Tecnologia Independente para o seu Bolso</title>
+    <!-- Ligação com o arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Metatags Básicas de SEO e Compartilhamento (WhatsApp, Instagram, etc) -->
+    <meta property="og:title" content="Komitech - Inteligência Financeira e Economia Real">
+    <meta property="og:description"
+        content="Conheça o ecossistema de aplicações Komitech focadas em planejamento inteligente de compras e economia financeira.">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+
+    <!-- Navegação limpa entre a empresa Komitech e cada aplicação -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-link">
+                <span class="brand-badge">KT</span>
+                <span>Komi<span class="highlight">tech</span></span>
+            </a>
+
+            <div class="nav-apps">
+                <span class="nav-label">Aplicações:</span>
+                <a href="index.html" class="nav-pill active">Komitech</a>
+                <a href="mercadin.html" class="nav-pill">
+                    <span class="dot"></span>
+                    SmartGasto
+                </a>
+                <a href="exclusao-conta.html" class="nav-pill">
+                    Exclusão de Conta
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <img src="assets/logo-komitech.svg" alt="Logo Komitech" class="logo-header">
+        <h1>KOMITECH</h1>
+        <p>Tecnologia independente a favor do <strong>seu bolso</strong></p>
+
+        <!-- Botões de acesso rápido às nossas aplicações -->
+        <div class="botoes-shama">
+            <a href="mercadin.html" class="btn-shama btn-play">
+                <svg class="btn-icone" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                Acessar SmartGasto
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- FRASE DE IMPACTO -->
+        <div class="impact-phrase reveal">
+            <h2>Transforme dados do dia a dia em economia financeira real.</h2>
+            <p>Desenvolvemos aplicações móveis independentes, rápidas e transparentes para ajudar o consumidor final a comprar melhor e gastar menos.</p>
+        </div>
+
+        <!-- NOSSAS APLICAÇÕES -->
+        <div class="section-block reveal">
+            <h2>Nossas Aplicações</h2>
+            <p>Escolha uma aplicação do ecossistema <strong>Komitech</strong> para visualizar sua página exclusiva, funcionalidades, links de download e termos:</p>
+
+            <div class="app-showcase">
+                <div class="app-spotlight">
+                    <span class="app-status-badge">● Aplicação Disponível</span>
+                    <h3>SmartGasto</h3>
+                    <p>Seu copiloto independente para compras de supermercado. Compare preços locais num raio de 1 km a 10 km, cruze histórico de notas fiscais (NFC-e) e organize sua lista com funcionamento <em>offline-first</em>.</p>
+                    <ul class="app-features-inline">
+                        <li>Comparação por Raio (1 a 10 km)</li>
+                        <li>Histórico de NFC-e</li>
+                        <li>10 Categorias Automáticas</li>
+                        <li>100% Independente</li>
+                    </ul>
+                    <div>
+                        <a href="mercadin.html" class="btn-shama btn-play">
+                            Abrir Página do SmartGasto →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOBRE A EMPRESA -->
+        <div class="section-block reveal">
+            <h2>Sobre a Komitech</h2>
+            <p>A <strong>Komitech</strong> nasceu para devolver o poder de decisão ao consumidor final. Nossas aplicações são totalmente independentes e imparciais — não pertencemos a redes varejistas e trabalhamos exclusivamente a favor do seu orçamento.</p>
+            <p>Combinamos interfaces móveis fluidas em <strong>Flutter</strong> com sincronização em nuvem (<strong>Supabase</strong>) e armazenamento local (<strong>SQLite</strong>), garantindo que você tenha inteligência de preços na palma da mão em qualquer lugar.</p>
+        </div>
+
+        <div class="section-block reveal" style="text-align: center; border: none;">
+            <h3>Dúvidas ou Sugestões?</h3>
+            <p>Fale conosco: <a href="mailto:smartgasto@gmail.com">smartgasto@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Komitech. Todos os direitos reservados. | <a href="index.html">Início</a> • <a href="mercadin.html">SmartGasto</a> • <a href="exclusao-conta.html">Exclusão de Conta</a></p>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+
+</html>

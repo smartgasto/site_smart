@@ -1,0 +1,730 @@
+/* ==========================================================================
+   KOMITECH & SMARTGASTO - PREMIUM EMERALD & WHITE DESIGN
+   Foco em tons de verde profundo, tipografia branca e layout fluido sem excesso de containers
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+:root {
+    --bg-deep: #031710;
+    --bg-emerald: #05261b;
+    --bg-surface: rgba(16, 185, 129, 0.06);
+    --bg-surface-hover: rgba(16, 185, 129, 0.11);
+    --emerald-bright: #10b981;
+    --emerald-glow: #34d399;
+    --emerald-vivid: #059669;
+    --text-white: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.82);
+    --text-muted: rgba(209, 250, 229, 0.65);
+    --line-subtle: rgba(52, 211, 153, 0.16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-deep);
+    background-image:
+        radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.22) 0%, transparent 55%),
+        radial-gradient(circle at 85% 35%, rgba(5, 150, 105, 0.14) 0%, transparent 45%),
+        linear-gradient(180deg, #042217 0%, #031710 50%, #02100b 100%);
+    background-attachment: fixed;
+    color: var(--text-white);
+    line-height: 1.75;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   NAVEGAÇÃO SUPERIOR MINIMALISTA (KOMITECH)
+   ========================================================================== */
+.top-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(3, 23, 16, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line-subtle);
+    padding: 16px 28px;
+}
+
+.nav-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.22rem;
+    letter-spacing: -0.02em;
+}
+
+.brand-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--emerald-glow) 0%, var(--emerald-vivid) 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #022c22;
+    font-weight: 800;
+    font-size: 0.92rem;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.brand-link span.highlight {
+    color: var(--emerald-glow);
+}
+
+.nav-apps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-label {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-right: 4px;
+    font-weight: 600;
+}
+
+.nav-pill {
+    text-decoration: none;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-pill:hover {
+    color: var(--text-white);
+    border-color: var(--line-subtle);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-pill.active {
+    background: rgba(16, 185, 129, 0.18);
+    color: var(--text-white);
+    border-color: var(--emerald-glow);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+.nav-pill .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--emerald-glow);
+    box-shadow: 0 0 8px var(--emerald-glow);
+}
+
+/* ==========================================================================
+   HEADER / HERO SECTION
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 72px 20px 40px;
+    position: relative;
+}
+
+.logo-header {
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(16, 185, 129, 0.32);
+}
+
+header h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text-white);
+    margin-bottom: 8px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    font-size: 1.12rem;
+    color: var(--text-soft);
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+header p strong {
+    color: var(--emerald-glow);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   BOTÕES DE ACESSO RÁPIDO (.botoes-shama / .btn-shama)
+   ========================================================================== */
+.botoes-shama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+
+.btn-shama {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 26px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--text-white);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+}
+
+.btn-shama:hover {
+    transform: translateY(-3px);
+    border-color: var(--emerald-glow);
+    box-shadow: 0 12px 28px rgba(16, 185, 129, 0.28);
+}
+
+.btn-play {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: var(--text-white);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+}
+
+.btn-play:hover {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+}
+
+.btn-apple,
+.btn-web {
+    background: rgba(16, 185, 129, 0.09);
+    color: var(--text-white);
+    border-color: var(--line-subtle);
+}
+
+.btn-apple:hover,
+.btn-web:hover {
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.btn-icone {
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   MOCKUPS 3D TRIPLOS (.mockups-wrapper)
+   ========================================================================== */
+.mockups-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin: 54px auto 10px;
+    max-width: 980px;
+    perspective: 1200px;
+    padding: 10px 16px;
+}
+
+.phone-mockup {
+    width: 240px;
+    height: 486px;
+    background: #02140e;
+    border-radius: 40px;
+    padding: 11px;
+    border: 2px solid rgba(52, 211, 153, 0.28);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+    position: relative;
+}
+
+.phone-mockup::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 66px;
+    height: 16px;
+    background: #010a07;
+    border-radius: 999px;
+    z-index: 5;
+}
+
+.phone-1 {
+    transform: rotateY(20deg) rotateZ(-4deg) translateY(20px) scale(0.92);
+}
+
+.phone-2 {
+    width: 266px;
+    height: 528px;
+    transform: translateZ(45px);
+    z-index: 3;
+    border-color: var(--emerald-glow);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.75), 0 0 45px rgba(16, 185, 129, 0.25);
+}
+
+.phone-3 {
+    transform: rotateY(-20deg) rotateZ(4deg) translateY(20px) scale(0.92);
+}
+
+.phone-mockup:hover {
+    transform: rotateY(0deg) rotateZ(0deg) translateY(-6px) scale(1);
+    border-color: var(--emerald-glow);
+    z-index: 4;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #05261b;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    color: var(--text-white);
+    position: relative;
+}
+
+/* UI Simulada Premium Verde & Branca dentro das telas */
+.mock-ui {
+    padding: 38px 15px 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #063324 0%, #031a12 100%);
+    font-size: 0.76rem;
+    color: var(--text-white);
+}
+
+.mock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    color: var(--text-soft);
+    font-size: 0.7rem;
+}
+
+.mock-tag {
+    background: rgba(16, 185, 129, 0.22);
+    color: var(--emerald-glow);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 99px;
+    font-size: 0.64rem;
+}
+
+.mock-title {
+    font-weight: 800;
+    font-size: 0.96rem;
+    color: var(--text-white);
+    margin-bottom: 12px;
+}
+
+.mock-row-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(52, 211, 153, 0.14);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.mock-prod-name {
+    font-weight: 600;
+    font-size: 0.74rem;
+    color: var(--text-white);
+    line-height: 1.3;
+}
+
+.mock-badge-best {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 0.64rem;
+    font-weight: 600;
+    color: var(--emerald-glow);
+}
+
+.mock-qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-white);
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.mock-sticky-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: var(--text-white);
+    text-align: center;
+    font-weight: 700;
+    padding: 11px;
+    border-radius: 12px;
+    font-size: 0.76rem;
+    box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+}
+
+/* ==========================================================================
+   FLUXO PRINCIPAL SEM EXCESSO DE CONTAINERS
+   ========================================================================== */
+.container {
+    max-width: 920px;
+    margin: 0 auto 80px;
+    padding: 0 24px;
+}
+
+.impact-phrase {
+    text-align: center;
+    padding: 56px 16px 48px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--line-subtle);
+}
+
+.impact-phrase h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--text-white);
+    letter-spacing: -0.02em;
+}
+
+.impact-phrase p {
+    color: var(--text-soft);
+    font-size: 1.12rem;
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+/* Seções abertas e elegantes, separadas apenas por respiro e linha sutil */
+.section-block {
+    padding: 44px 0;
+    border-bottom: 1px solid var(--line-subtle);
+}
+
+.section-block:last-child {
+    border-bottom: none;
+}
+
+.section-block h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+    font-weight: 800;
+    color: var(--text-white);
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+}
+
+.section-block h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    margin: 26px 0 12px;
+    color: var(--emerald-glow);
+}
+
+.section-block p {
+    color: var(--text-soft);
+    margin-bottom: 16px;
+    font-size: 1.02rem;
+}
+
+.section-block p strong {
+    color: var(--text-white);
+}
+
+.section-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   LISTA DE APLICAÇÕES (PORTAL KOMITECH - SEM CAIXAS PESADAS)
+   ========================================================================== */
+.app-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 24px;
+}
+
+.app-spotlight {
+    padding: 32px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(5, 150, 105, 0.04) 100%);
+    border: 1px solid rgba(52, 211, 153, 0.32);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.app-spotlight:hover {
+    transform: translateY(-3px);
+    border-color: var(--emerald-glow);
+}
+
+.app-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--emerald-glow);
+}
+
+.app-spotlight h3 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: var(--text-white);
+}
+
+.app-features-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    list-style: none;
+    margin: 6px 0 10px;
+}
+
+.app-features-inline li {
+    font-size: 0.95rem;
+    color: var(--text-white);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.app-features-inline li::before {
+    content: "✦";
+    color: var(--emerald-glow);
+}
+
+/* ==========================================================================
+   CARROSSEL DE DESTAQUE INTERATIVO 3D (.marquee-wrapper)
+   ========================================================================== */
+.marquee-wrapper {
+    overflow-x: hidden;
+    cursor: grab;
+    padding: 26px 0;
+    user-select: none;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.marquee-wrapper.active {
+    cursor: grabbing;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 20px;
+}
+
+.marquee-item {
+    width: 265px;
+    flex-shrink: 0;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(52, 211, 153, 0.24);
+    border-radius: 20px;
+    padding: 24px 22px;
+    backdrop-filter: blur(12px);
+    will-change: transform, opacity;
+}
+
+.marquee-item h3 {
+    margin: 0 0 8px;
+    font-size: 1.08rem;
+    color: var(--text-white);
+}
+
+.marquee-item p {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* ==========================================================================
+   FAQ & POLÍTICAS MINIMALISTAS (<details> e <summary>)
+   ========================================================================== */
+details {
+    border-bottom: 1px solid var(--line-subtle);
+    padding: 6px 0;
+    transition: all 0.25s ease;
+}
+
+summary {
+    padding: 16px 4px;
+    font-weight: 600;
+    font-size: 1.04rem;
+    color: var(--text-white);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+summary:hover {
+    color: var(--emerald-glow);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "+";
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--emerald-glow);
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+.faq-content,
+.policy-content {
+    padding: 4px 4px 20px;
+    color: var(--text-soft);
+    font-size: 0.96rem;
+}
+
+.policy-content ul,
+.agradecimentos-lista {
+    padding-left: 22px;
+    margin: 12px 0;
+    color: var(--text-soft);
+}
+
+.policy-content li,
+.agradecimentos-lista li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: var(--emerald-glow);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+}
+
+.btn-shama:hover,
+.nav-pill:hover,
+.brand-link:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   ANIMAÇÃO DE ROLAGEM (.reveal) & FOOTER
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 42px 20px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--line-subtle);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 820px) {
+    .mockups-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .phone-1,
+    .phone-3 {
+        display: none;
+    }
+
+    .phone-2 {
+        transform: none;
+        width: 260px;
+        height: 510px;
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+}

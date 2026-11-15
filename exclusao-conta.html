@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusão de Conta - SmartGasto</title>
+    <!-- Ligação com o arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Metatags de SEO e Requisitos das Lojas de Apps (Google Play / App Store) -->
+    <meta property="og:title" content="Privacidade e Exclusão de Conta - SmartGasto">
+    <meta property="og:description"
+        content="Instruções e procedimento para solicitação de exclusão total de conta e dados pessoais dos aplicativos da SmartGasto.">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+
+    <!-- Navegação superior limpa -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-link">
+                <span class="brand-badge">KT</span>
+                <span>Komi<span class="highlight">tech</span></span>
+            </a>
+
+            <div class="nav-apps">
+                <span class="nav-label">Aplicações:</span>
+                <a href="index.html" class="nav-pill">Komitech</a>
+                <a href="mercadin.html" class="nav-pill">
+                    <span class="dot"></span>
+                    SmartGasto
+                </a>
+                <a href="exclusao-conta.html" class="nav-pill active">
+                    Exclusão de Conta
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <img src="assets/logo-komitech.svg" alt="Logo Komitech" class="logo-header">
+        <h1>EXCLUSÃO DE CONTA</h1>
+        <p>SmartGasto • Desenvolvido por <strong>Komitech</strong></p>
+    </header>
+
+    <div class="container">
+
+        <!-- BLOCO PRINCIPAL DE EXCLUSÃO DE CONTA -->
+        <div class="section-block reveal active">
+            <h2>Privacidade e Exclusão de Conta - SmartGasto</h2>
+            <p>
+                Para solicitar a exclusão total da sua conta e de todos os dados associados (nome, e-mail, listas de
+                compras e histórico de localização), envie um e-mail para <a
+                    href="mailto:smartgasto@gmail.com?subject=Exclus%C3%A3o%20de%20Conta">smartgasto@gmail.com</a> com o
+                assunto <strong>"Exclusão de Conta"</strong> utilizando o mesmo e-mail cadastrado no aplicativo.
+            </p>
+            <p>
+                Todos os seus dados serão apagados permanentemente de nossos servidores (Supabase) em até <strong>7 dias
+                    úteis</strong>.
+            </p>
+
+            <div style="margin-top: 28px;">
+                <a href="mailto:smartgasto@gmail.com?subject=Exclus%C3%A3o%20de%20Conta" class="btn-shama btn-play">
+                    <svg class="btn-icone" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Enviar E-mail de Solicitação
+                </a>
+            </div>
+        </div>
+
+        <!-- DETALHAMENTO DOS DADOS ELIMINADOS (REQUISITO GOOGLE PLAY / APP STORE) -->
+        <div class="section-block reveal">
+            <h2>Quais dados são excluídos?</h2>
+            <p>Ao processarmos sua solicitação, os seguintes dados são eliminados definitivamente:</p>
+            <ul class="policy-content" style="list-style-type: disc; padding-left: 24px;">
+                <li><strong>Credenciais de Conta:</strong> Nome, foto de perfil e endereço de e-mail associados ao login
+                    Google no Supabase Auth;</li>
+                <li><strong>Listas e Histórico:</strong> Todas as listas de compras, histórico de itens marcados e
+                    preferências de supermercados favoritos;</li>
+                <li><strong>Localização e Parâmetros:</strong> Bairros configurados, histórico de raio geográfico (1 km
+                    a 10 km) e preferências locais;</li>
+                <li><strong>Dados no Dispositivo:</strong> O banco de dados SQLite local no seu aparelho também é
+                    desvinculado imediatamente.</li>
+            </ul>
+        </div>
+
+        <div class="section-block reveal" style="text-align: center; border: none;">
+            <h3>Dúvidas adicionais sobre seus dados?</h3>
+            <p>Fale diretamente com nossa equipe: <a href="mailto:smartgasto@gmail.com">smartgasto@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Komitech. Todos os direitos reservados. | <a href="index.html">Início</a> • <a
+                href="mercadin.html">SmartGasto</a> • <a href="exclusao-conta.html">Exclusão de Conta</a></p>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+
+</html>

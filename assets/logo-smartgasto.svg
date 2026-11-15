@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="smartgastoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#smartgastoGrad)" />
+  <circle cx="46" cy="88" r="5" fill="#ffffff" />
+  <circle cx="82" cy="88" r="5" fill="#ffffff" />
+  <path d="M24 30h12l10 42a6 6 0 0 0 5.8 4.6h32.4a6 6 0 0 0 5.8-4.5L96 42H40" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M64 50v16M56 58h16" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+</svg>
