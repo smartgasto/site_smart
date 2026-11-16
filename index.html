@@ -1,131 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komitech - Tecnologia Independente para o seu Bolso</title>
-    <!-- Ligação com o arquivo CSS separado -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Metatags Básicas de SEO e Compartilhamento (WhatsApp, Instagram, etc) -->
-    <meta property="og:title" content="Komitech - Inteligência Financeira e Economia Real">
-    <meta property="og:description"
-        content="Conheça o ecossistema de aplicações Komitech focadas em planejamento inteligente de compras e economia financeira.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#031710">
+    <meta name="description" content="Conheça a Komitech, empresa de tecnologia que desenvolve o SmartGasto para facilitar o planejamento e a comparação de preços no supermercado.">
+    <meta property="og:title" content="Komitech | Tecnologia para comprar melhor">
+    <meta property="og:description" content="Conheça a Komitech e o SmartGasto, nosso aplicativo para organizar compras e consultar preços.">
     <meta property="og:type" content="website">
+    <title>Komitech | Tecnologia para comprar melhor</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo-komitech.svg">
+    <link rel="preload" as="image" href="assets/screenshots/screen-lista-compras.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <script src="motion.js" defer></script>
 </head>
-
-<body>
-
-    <!-- Navegação limpa entre a empresa Komitech e cada aplicação -->
-    <nav class="top-navbar">
+<body class="company-page">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <nav class="top-navbar" aria-label="Navegação principal">
         <div class="nav-container">
-            <a href="index.html" class="brand-link">
-                <span class="brand-badge">KT</span>
+            <a class="brand-link" href="index.html" aria-label="Komitech — página inicial">
+                <img src="assets/logo-komitech.svg" width="40" height="40" alt="">
                 <span>Komi<span class="highlight">tech</span></span>
             </a>
-
             <div class="nav-apps">
-                <span class="nav-label">Aplicações:</span>
-                <a href="index.html" class="nav-pill active">Komitech</a>
-                <a href="mercadin.html" class="nav-pill">
-                    <span class="dot"></span>
-                    SmartGasto
-                </a>
-                <a href="exclusao-conta.html" class="nav-pill">
-                    Exclusão de Conta
-                </a>
+                <a class="nav-pill active" href="index.html" aria-current="page">Komitech</a>
+                <a class="nav-pill" href="mercadin.html">SmartGasto</a>
+                <a class="nav-pill" href="mercadin.html#politicas">Privacidade e termos</a>
             </div>
         </div>
     </nav>
 
-    <header>
-        <img src="assets/logo-komitech.svg" alt="Logo Komitech" class="logo-header">
-        <h1>KOMITECH</h1>
-        <p>Tecnologia independente a favor do <strong>seu bolso</strong></p>
-
-        <!-- Botões de acesso rápido às nossas aplicações -->
-        <div class="botoes-shama">
-            <a href="mercadin.html" class="btn-shama btn-play">
-                <svg class="btn-icone" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
-                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="9" cy="21" r="1"></circle>
-                    <circle cx="20" cy="21" r="1"></circle>
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-                Acessar SmartGasto
-            </a>
-        </div>
-    </header>
-
-    <div class="container">
-
-        <!-- FRASE DE IMPACTO -->
-        <div class="impact-phrase reveal">
-            <h2>Transforme dados do dia a dia em economia financeira real.</h2>
-            <p>Desenvolvemos aplicações móveis independentes, rápidas e transparentes para ajudar o consumidor final a comprar melhor e gastar menos.</p>
-        </div>
-
-        <!-- NOSSAS APLICAÇÕES -->
-        <div class="section-block reveal">
-            <h2>Nossas Aplicações</h2>
-            <p>Escolha uma aplicação do ecossistema <strong>Komitech</strong> para visualizar sua página exclusiva, funcionalidades, links de download e termos:</p>
-
-            <div class="app-showcase">
-                <div class="app-spotlight">
-                    <span class="app-status-badge">● Aplicação Disponível</span>
-                    <h3>SmartGasto</h3>
-                    <p>Seu copiloto independente para compras de supermercado. Compare preços locais num raio de 1 km a 10 km, cruze histórico de notas fiscais (NFC-e) e organize sua lista com funcionamento <em>offline-first</em>.</p>
-                    <ul class="app-features-inline">
-                        <li>Comparação por Raio (1 a 10 km)</li>
-                        <li>Histórico de NFC-e</li>
-                        <li>10 Categorias Automáticas</li>
-                        <li>100% Independente</li>
-                    </ul>
-                    <div>
-                        <a href="mercadin.html" class="btn-shama btn-play">
-                            Abrir Página do SmartGasto →
-                        </a>
-                    </div>
+    <main id="conteudo">
+        <section class="hero hero-company wrap" aria-labelledby="titulo-principal">
+            <div class="hero-copy">
+                <p class="eyebrow">Komitech · Tecnologia independente</p>
+                <h1 id="titulo-principal">Tecnologia que ajuda você a <em>comprar melhor.</em></h1>
+                <p class="hero-description">Criamos soluções digitais para dar mais clareza às decisões do dia a dia. Nosso primeiro aplicativo, o SmartGasto, transforma o planejamento das compras em uma tarefa mais simples.</p>
+                <div class="hero-actions">
+                    <a href="mercadin.html" class="button button-primary">Conhecer o SmartGasto <span aria-hidden="true">↗</span></a>
+                    <a href="#sobre" class="button button-secondary">Sobre a Komitech</a>
                 </div>
             </div>
+            <div class="company-showcase" aria-label="Destaque do aplicativo SmartGasto">
+                <div class="showcase-topline"><img src="assets/logo-smartgasto.svg" width="44" height="44" alt=""><div><strong>SmartGasto</strong><span>Nosso primeiro aplicativo</span></div></div>
+                <div class="showcase-screen phone-frame">
+                    <img src="assets/screenshots/screen-lista-compras.jpeg" alt="Tela real do SmartGasto com uma lista de supermercado" width="790" height="1599" fetchpriority="high">
+                </div>
+                <a class="showcase-link" href="mercadin.html">Explorar o aplicativo <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="section section-contrast" id="sobre" aria-labelledby="sobre-titulo">
+            <div class="wrap">
+                <div class="section-heading">
+                    <p class="section-kicker">Sobre a Komitech</p>
+                    <h2 id="sobre-titulo">Boas decisões começam com informação acessível.</h2>
+                    <p>A Komitech desenvolve produtos digitais independentes para ajudar consumidores a organizar suas escolhas com mais praticidade e transparência.</p>
+                </div>
+                <div class="benefit-grid">
+                    <article class="benefit-card"><div class="benefit-symbol" aria-hidden="true">01</div><h3>Foco em quem compra</h3><p>Partimos de situações reais, como organizar a lista antes de ir ao supermercado.</p></article>
+                    <article class="benefit-card"><div class="benefit-symbol" aria-hidden="true">02</div><h3>Informações mais claras</h3><p>Transformamos dados e comparações em recursos simples de consultar.</p></article>
+                    <article class="benefit-card"><div class="benefit-symbol" aria-hidden="true">03</div><h3>Autonomia nas escolhas</h3><p>Nossas soluções ajudam o consumidor a decidir onde e como comprar.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap feature-section company-feature" id="smartgasto" aria-labelledby="app-titulo">
+            <div class="feature-copy">
+                <p class="section-kicker">Conheça nosso aplicativo</p>
+                <h2 id="app-titulo">SmartGasto. Uma ajuda prática para o supermercado.</h2>
+                <p>Prepare listas, organize produtos por categoria e consulte comparações de preços. Tudo em uma experiência pensada para acompanhar sua rotina de compras.</p>
+                <a class="button button-primary" href="mercadin.html">Ver funcionalidades e download <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="feature-visual"><div class="phone-frame phone-feature"><img src="assets/screenshots/screen-comparacao-precos.jpeg" width="792" height="1599" alt="Tela real de comparação de preços do SmartGasto" loading="lazy" decoding="async"></div></div>
+        </section>
+
+        <section class="section section-contrast company-contact" aria-labelledby="contato-titulo">
+            <div class="wrap contact-section">
+                <div>
+                    <p class="section-kicker">Vamos conversar</p>
+                    <h2 id="contato-titulo">Quer falar com a Komitech?</h2>
+                    <p>Para dúvidas, sugestões ou assuntos relacionados aos nossos produtos, entre em contato com a equipe.</p>
+                </div>
+                <a class="button button-outline" href="mailto:smartgasto@gmail.com">Entrar em contato <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div><strong>Komitech</strong><p>Tecnologia independente para escolhas mais inteligentes.</p></div>
+            <div class="footer-links">
+                <a href="index.html">Empresa</a>
+                <a href="mercadin.html">SmartGasto</a>
+                <a href="mercadin.html#politicas">Privacidade e termos</a>
+                <a href="exclusao-conta.html">Exclusão de conta</a>
+                <a href="mailto:smartgasto@gmail.com">Contato</a>
+            </div>
         </div>
-
-        <!-- SOBRE A EMPRESA -->
-        <div class="section-block reveal">
-            <h2>Sobre a Komitech</h2>
-            <p>A <strong>Komitech</strong> nasceu para devolver o poder de decisão ao consumidor final. Nossas aplicações são totalmente independentes e imparciais — não pertencemos a redes varejistas e trabalhamos exclusivamente a favor do seu orçamento.</p>
-            <p>Combinamos interfaces móveis fluidas em <strong>Flutter</strong> com sincronização em nuvem (<strong>Supabase</strong>) e armazenamento local (<strong>SQLite</strong>), garantindo que você tenha inteligência de preços na palma da mão em qualquer lugar.</p>
-        </div>
-
-        <div class="section-block reveal" style="text-align: center; border: none;">
-            <h3>Dúvidas ou Sugestões?</h3>
-            <p>Fale conosco: <a href="mailto:smartgasto@gmail.com">smartgasto@gmail.com</a></p>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Komitech. Todos os direitos reservados. | <a href="index.html">Início</a> • <a href="mercadin.html">SmartGasto</a> • <a href="exclusao-conta.html">Exclusão de Conta</a></p>
+        <p class="footer-copyright">© 2026 Komitech. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", reveal);
-        reveal();
-    </script>
 </body>
-
 </html>

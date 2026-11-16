@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusão de Conta - SmartGasto</title>
-    <!-- Ligação com o arquivo CSS separado -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Metatags de SEO e Requisitos das Lojas de Apps (Google Play / App Store) -->
-    <meta property="og:title" content="Privacidade e Exclusão de Conta - SmartGasto">
-    <meta property="og:description"
-        content="Instruções e procedimento para solicitação de exclusão total de conta e dados pessoais dos aplicativos da SmartGasto.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#031710">
+    <meta name="description" content="Saiba como solicitar a exclusão de sua conta e dos dados pessoais associados ao SmartGasto.">
+    <meta property="og:title" content="Exclusão de conta | SmartGasto">
+    <meta property="og:description" content="Orientações para solicitação da exclusão de conta e dados pessoais do SmartGasto.">
     <meta property="og:type" content="website">
+    <title>Exclusão de conta | SmartGasto</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo-smartgasto.svg">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Navegação superior limpa -->
-    <nav class="top-navbar">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <nav class="top-navbar" aria-label="Navegação principal">
         <div class="nav-container">
-            <a href="index.html" class="brand-link">
-                <span class="brand-badge">KT</span>
+            <a class="brand-link" href="index.html" aria-label="Komitech — página inicial">
+                <img src="assets/logo-komitech.svg" width="40" height="40" alt="">
                 <span>Komi<span class="highlight">tech</span></span>
             </a>
-
             <div class="nav-apps">
-                <span class="nav-label">Aplicações:</span>
-                <a href="index.html" class="nav-pill">Komitech</a>
-                <a href="mercadin.html" class="nav-pill">
-                    <span class="dot"></span>
-                    SmartGasto
-                </a>
-                <a href="exclusao-conta.html" class="nav-pill active">
-                    Exclusão de Conta
-                </a>
+                <a class="nav-pill" href="index.html">Komitech</a>
+                <a class="nav-pill" href="mercadin.html">SmartGasto</a>
+                <a class="nav-pill active" href="exclusao-conta.html" aria-current="page">Exclusão de conta</a>
             </div>
         </div>
     </nav>
-
-    <header>
-        <img src="assets/logo-komitech.svg" alt="Logo Komitech" class="logo-header">
-        <h1>EXCLUSÃO DE CONTA</h1>
-        <p>SmartGasto • Desenvolvido por <strong>Komitech</strong></p>
-    </header>
-
+    <main id="conteudo">
+        <header class="deletion-hero">
+            <p class="eyebrow">Seus dados e sua privacidade</p>
+            <h1>Exclusão de conta</h1>
+            <p>Informações sobre como solicitar a exclusão dos seus dados no SmartGasto.</p>
+        </header>
     <div class="container">
 
         <!-- BLOCO PRINCIPAL DE EXCLUSÃO DE CONTA -->
@@ -96,28 +84,18 @@
 
     </div>
 
-    <footer>
-        <p>&copy; 2026 Komitech. Todos os direitos reservados. | <a href="index.html">Início</a> • <a
-                href="mercadin.html">SmartGasto</a> • <a href="exclusao-conta.html">Exclusão de Conta</a></p>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div><strong>Komitech</strong><p>Desenvolvemos o SmartGasto para simplificar suas compras.</p></div>
+            <div class="footer-links">
+                <a href="index.html">Komitech</a>
+                <a href="mercadin.html">Aplicativo</a>
+                <a href="mercadin.html#politicas">Privacidade e termos</a>
+                <a href="mailto:smartgasto@gmail.com">Contato</a>
+            </div>
+        </div>
+        <p class="footer-copyright">© 2026 Komitech. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", reveal);
-        reveal();
-    </script>
 </body>
-
 </html>
